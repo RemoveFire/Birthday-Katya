@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Сила. Красота. Свобода.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preload" href="fonts/CeremoniousOne.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Thin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="scene scene-start active" id="start">
+  <div class="image-trigger" id="envelope">
+    <img src="img/trigger.svg" alt="">
+  </div>
+</section>
+
+<section class="scene scene-letter" id="letter">
+
+  <video id="bgVideo" muted autoplay loop playsinline>
+    <source src="video/horses.mp4" type="video/mp4">
+  </video>
+
+  <div class="dark-overlay"></div>
+
+  <div class="content" id="mainContent">
+
+    <h1 class="hero-title">
+      <span>Сила.</span>
+      <span>Красота.</span>
+      <span>Свобода.</span>
+    </h1>
+
+    <!-- 🔒 СТАБИЛЬНЫЙ КОНТЕЙНЕР -->
+    <div class="subtitle-wrapper">
+      <h2 class="subtitle-ghost">
+        Сертификат на урок верховой езды в окружении природы
+      </h2>
+      <h2 id="subtitle" class="subtitle-live"></h2>
+    </div>
+
+    <!-- Стрелка + Перейти -->
+    <div class="scroll-hint" id="scrollHint">
+      <div class="arrow"></div>
+      <div class="hint-text">Перейти</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="modal" id="certificateModal">
+  <div class="modal-content">
+
+    <h3>Подарочный сертификат</h3>
+
+    <div class="cert-body">
+
+      <p class="strong">Урок верховой езды (60 мин)</p>
+      <p>
+        Индивидуальное занятие с тренером на плацу<br>
+        (можно совместить с прогулкой)
+      </p>
+
+      <p class="strong">Локация:</p>
+      <p>
+        <a href="https://yandex.ru/maps/-/CLwMEE9H" target="_blank">
+          Школа верховой езды «Гармония»<br>
+          Парк «Сокольники», вблизи Шереметьевской дубравы
+        </a>
+      </p>
+
+      <p class="strong">Срок действия:</p>
+      <p>3 месяца</p>
+
+    </div>
+
+    <div class="cert-actions">
+      <button class="magic-btn" id="openPage">Распечатать</button>
+      <button class="magic-btn" id="downloadPdf">Скачать</button>
+    </div>
+
+    <button class="close" id="closeModal">Закрыть</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
